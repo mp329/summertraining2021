@@ -1,0 +1,1 @@
+aws ec2 run-instances --image-id  ami-0ad704c126371a549 --instance-type t2.micro --count 1 --subnet-id subnet-d013e6bb --security-group-ids sg-f034da8c --tag-specifications=ResourceType=instance,Tags=[{Key=Name,Value=New_Instance}] --query Instances[*].[InstanceId] --output text
