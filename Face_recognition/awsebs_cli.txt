@@ -1,0 +1,1 @@
+aws ec2 create-volume --availability-zone ap-south-1a --size 5 --tag-specifications ResourceType=volume,Tags=[{Key=Name,Value=New_Volume}] --query VolumeId --output text
