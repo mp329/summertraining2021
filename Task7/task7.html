@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div#box {
+  background-color: lightgrey;
+  width: 500px;
+  border: 15px solid rgb(56, 61, 136);
+  padding: 50px;
+  margin: 20px;
+  left: 110px;
+  resize: both;
+  overflow: auto;
+
+}
+body {
+  background-image: url("https://www.vinsguru.com/wp-content/uploads/2018/04/docker-volume-mapping-header.gif"); 
+  
+
+}
+div#head{
+
+  background-color: crimson;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  border-radius: 7px;
+  left: 580px;
+  box-shadow: darkgrey;
+  border: 5px solid rgb(21, 144, 214);
+  
+  
+  
+}
+
+div#box{
+  position: relative;
+  left: 440px;
+  bottom: -150px;
+}
+
+button:hover {
+  box-shadow: 0 0 2px 1px rgba(214, 231, 236, 0.5);
+} 
+
+div#btn{
+  position: relative;
+  bottom: -102px;
+  left: 800px;
+  
+}
+
+div#inputbox{
+  
+  position: relative;
+  bottom: -78px;
+  left: 600px;
+
+}
+button {
+  border: 1px solid rgb(121, 165, 156);
+  border-radius: 4px;
+  padding: 5px;
+  width: 80px;
+  height: 27px;
+}
+
+div#root{
+  position: relative;
+  left: 472px;
+  bottom: -125px;
+
+}
+
+
+</style>
+</head>
+
+<script>
+
+function XHR()
+{
+
+
+var input = document.getElementById("in").value
+var xhr = new XMLHttpRequest()
+
+xhr.open("GET", "http://192.168.42.189/cgi-bin/task7.py?x=" + input,true);
+xhr.send();
+
+xhr.onload = response
+function response()
+	{
+		var output = xhr.responseText;
+		oldText = document.getElementById("box");
+		oldText.innerHTML = output;
+	}
+
+
+}
+
+
+</script>
+<body>
+
+<div id ="head">
+<h2>WEB APP FOR DOCKER</h2>
+</div>
+
+<b>
+<div id="root">[root@localhost ~]</div>
+</b>
+
+<div id="btn">
+<button onclick = "XHR();">Run</button>
+</div>
+
+<div id="inputbox">
+
+<input id = "in"/>
+
+</div>
+
+<pre>
+<div id ="box">
+This text is the content of the box.
+</div>
+</pre>
+
+
+</body>
+</html>
