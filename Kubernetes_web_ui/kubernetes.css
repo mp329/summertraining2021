@@ -1,0 +1,88 @@
+*{
+    margin:0px;
+    padding:0px; 
+    box-sizing: border-box;  
+  }
+#body{
+    background-image: url("kubernetes.jpg");
+}
+#image{
+    margin: 0px;
+    position: relative;
+}
+#names{
+    color: rgb(216, 13, 13);
+    text-align: left;
+    font-family: CustomFont2;
+    font-size: 25px;
+	/*text-shadow : 5px 5px #c40b0b;*/
+}
+#heading{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: CustomFont1;
+    font-size: 100px;
+	text-shadow : 5px 5px #c40b0b;
+	left: 0px;
+	bottom: 0px;
+}
+#main{
+    width: 60%;
+    margin: auto;
+}
+#main input,button{
+    width:75%;
+    border: 2px solid rgb(0, 0, 0);
+    border-right: 0px;
+    font-size: 18px;
+    padding: 12px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+}
+#main input{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+#main button{
+    width: 25%;
+    background:black;
+    color: white;
+    float: right;
+    border-left: 0px;
+}
+#main button:hover{
+    opacity: 0.8;
+}
+#main input:hover{
+    opacity: 0.8;
+}
+#main input:focus{
+    outline: none;
+}
+#output{
+    text-align: center;
+}
+div#container{
+    margin-left: 10%;
+    font-size: 17px;
+    padding: 20px;
+    color: white;
+    /*background-color: black;*/
+    max-width: 80%;
+    max-height: 40%;
+    padding-bottom: 30px;
+    resize:both;
+    overflow:auto;
+}
+@font-face {
+    font-family: "CustomFont1";
+    src: url("WinterSong.ttf");
+    font-size: large;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CustomFont2";
+    src: url("Freedom.ttf");
+    font-size: large;
+    font-style: normal;
+}
