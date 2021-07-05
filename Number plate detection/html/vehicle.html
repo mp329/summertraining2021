@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate Number</title>
+    <link rel="stylesheet" href="vehicle.css"> 
+</head> 
+<body id="body" >
+<script> 
+
+function sync(){
+    var selectInputValue = document.getElementById("searchBox").value;
+    console.log(selectInputValue);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://192.168.56.101/cgi-bin/new.py?Number="+selectInputValue, true);
+    xhr.send();
+    xhr.onload = function (){
+      var output = xhr.responseText;
+      document.getElementById("container").innerHTML = output;
+    }
+  }
+
+</script>
+       
+        </div> 
+        <div>
+            <h1 id="heading">Vehicle Info</h1>
+        </div>
+        
+        <div id="main">
+            <input type="text" id="searchBox" placeholder="Vehicle Number"/>
+            <button onclick="sync();">Search</button>
+        </div>
+        <pre>
+        <div id="container">Details</div>
+        </pre>
+        
+    </div>
+</body>
+</html>
